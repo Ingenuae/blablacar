@@ -14,7 +14,7 @@ public class HomeRestController {
     private static final String template = "WELCOME ON FUNKY BLABLACAR, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/greeting")
+    @RequestMapping("/home")
     public Home home(@RequestParam(value="name", defaultValue="World") String name) {
         return new Home(counter.incrementAndGet(),
                             String.format(template, name));

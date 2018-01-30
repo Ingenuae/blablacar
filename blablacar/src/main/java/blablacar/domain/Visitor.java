@@ -1,21 +1,39 @@
 package blablacar.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.util.Calendar;
+
+import org.hibernate.validator.constraints.NotBlank;
+
+//import lombok.Data;
+//
+//@Data
+@Entity
 public class Visitor {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
+	@NotBlank
 	private String login;
-	private String password;
+	private String password; 
 
 	private String firstName;
 	private String lastName;
-	private Long birthDate;
+	
+//	@Temporal(TemporalType.DATE)
+	private long birthDate;
+	
 	private String email;
 
-	private Long rating;
+	private String rating;
 	private boolean confirmed;
 
-	public Visitor(Visitor visitor) {
+	public Visitor() {
 
 	}
 
@@ -75,13 +93,7 @@ public class Visitor {
 		this.email = email;
 	}
 
-	public Long getRating() {
-		return rating;
-	}
 
-	public void setRating(Long rating) {
-		this.rating = rating;
-	}
 
 	public boolean isConfirmed() {
 		return confirmed;
@@ -89,5 +101,13 @@ public class Visitor {
 
 	public void setConfirmed(boolean confirmed) {
 		this.confirmed = confirmed;
+	}
+
+	public String getRating() {
+		return rating;
+	}
+
+	public void setRating(String rating) {
+		this.rating = rating;
 	}
 }
