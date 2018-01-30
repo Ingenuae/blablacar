@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+    <!-- 			binding="#{varPass}" -->
+<!-- 			<f:attribute name="attributeName" value="#{varPass}"></f:attribute> -->
+    
+       <p>WELCOME #{userControl.getUserForm().getUserName()} #{userControl.getUserForm().getUserSurname()}</p>
+       <p>Your Email is : #{userControl.userForm.email}</p>
+       <p>Your password :  #{userControl.userForm.password}</p>     
+       <p></p>    
+       
+
+	<h3>Login</h3>
+
+	<h:form>
+		<h:commandButton value="Login" action="Login"></h:commandButton>
+	</h:form>
+
+	<h3>New Account</h3>
+
+	<h:form>
+		<h:commandButton value="New Account" action="new"></h:commandButton>
+	</h:form>  
+
+
+</body>
+</html>

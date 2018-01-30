@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Hello, ' + ${name} + '!'" />
+
+<h3>Look for a Ride</h3>
+
+	<h:form>
+		<h:commandButton value="Search" action="ride"></h:commandButton>
+	</h:form>
+
+
+	<h3>Login</h3>
+
+	<h:form>
+		<h:commandButton value="Login" action="Login"></h:commandButton>
+	</h:form>
+
+	<h3>New Account</h3>
+
+	<h:form>
+		<h:commandButton value="New Account" action="new"></h:commandButton>
+	</h:form>
+
+	<p></p>
+
+</body>
+</html>
